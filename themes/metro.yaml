@@ -108,12 +108,8 @@ Metro Slate:
 
   card-mod-more-info-yaml: |
     $: |
-      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-        .mdc-dialog__surface {
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          background-color: rgba(var(--rgb-mdc-theme-surface), .5) !important;
-        }
+      .mdc-dialog__surface {
+        background-color: var(--card-background-color) !important;
       }
       .mdc-dialog .mdc-dialog__container .mdc-dialog__surface,
       .mdc-dialog .mdc-dialog__content {
@@ -123,12 +119,8 @@ Metro Slate:
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
       }
     ha-dialog$: |
-      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-        .mdc-dialog__surface {
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          background-color: rgba(var(--rgb-mdc-theme-surface), .5) !important;
-        }
+      .mdc-dialog__surface {
+        background-color: var(--card-background-color) !important;
       }
       .mdc-dialog__surface {
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
