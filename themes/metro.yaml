@@ -3,7 +3,7 @@
 # Updated to Home Assistant 2025.5+ standards
 # https://github.com/Madelena/Metrology-for-Hass
 
-Metro Slate Test:
+Metro Slate:
   card-mod-theme: "Metro Slate"
 
   # Card Mod YAML
