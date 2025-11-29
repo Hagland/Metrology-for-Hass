@@ -1,8 +1,7 @@
-# Metrology Themes for Home Assistant
-# Created by Madelena Mak 2022 https://mmak.es
+# Metro Slate Light Theme for Home Assistant
+# Modernized version based on Metrology by Madelena Mak 2022 https://mmak.es
+# Updated to Home Assistant 2025.5+ standards
 # https://github.com/Madelena/Metrology-for-Hass
-
-# To add your own custom color, see the examples at the end of this file.
 
 
 ############################################
@@ -42,15 +41,9 @@ ________________________________________Common Base (Do Not Use): &common-colors
   app-header-edit-text-color: var(--accent-text-color)
   app-header-border-bottom: none
 
-  # Material and Paper
-  light-theme-disabled-color: var(--disabled-color)
-  dark-theme-disabled-color: var(--disabled-color)
-
+  # Material
   material-disabled-color: var(--disabled-color)
   material-divider-color: var(--divider-color)
-
-  light-theme-base-color: var(--primary-color)
-  dark-theme-base-color: var(--primary-color)
 
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
@@ -63,19 +56,30 @@ ________________________________________Common Base (Do Not Use): &common-colors
   ha-card-border-color: transparent
   popup-border-radius: var(--ha-dialog-border-radius)
 
-  # Typography
+  # Typography - Modern HA 2025.5+ Variables
   font-stack: &font-stack "Segoe UI Variable Static Text, Segoe UI, SegoeUI, -apple-system,BlinkMacSystemFont, system-ui, sans-serif"
   display-font-stack: &display-font-stack "Segoe UI Variable Static Display, Segoe UI, SegoeUI, -apple-system,BlinkMacSystemFont, system-ui, sans-serif"
+
+  # HA Typography System (2025.5+)
+  ha-font-family-body: *font-stack
+  ha-font-size-2xs: 0.625rem
+  ha-font-size-xs: 0.75rem
+  ha-font-size-s: 0.875rem
+  ha-font-size-m: 1rem
+  ha-font-size-l: 1.125rem
+  ha-font-size-xl: 1.5rem
+  ha-font-size-2xl: 2rem
+  ha-font-size-3xl: 2.85rem
+  ha-font-size-4xl: 3.5rem
+  ha-font-weight-light: 300
+  ha-font-weight-regular: 400
+  ha-font-weight-medium: 500
+  ha-font-weight-semibold: 600
+  ha-font-weight-bold: 700
+
+  # Legacy Typography Variables (for backwards compatibility)
   mdc-typography-button-font-family: var(--font-stack)
   mdc-typography-font-family: var(--font-stack)
-  paper-font-common-base_-_font-family: var(--font-stack)
-  paper-font-title_-_font-family: var(--display-font-stack)
-  paper-font-headline_-_font-family: var(--display-font-stack)
-  paper-font-subhead_-_font-family: var(--display-font-stack)
-  paper-font-display1_-_font-family: var(--display-font-stack)
-  paper-font-display2_-_font-family: var(--display-font-stack)
-  paper-font-display3_-_font-family: var(--display-font-stack)
-  paper-font-display4_-_font-family: var(--display-font-stack)
 
   # Body at 14px = 10.5pt = 1rem
   body-font-size: 1rem
@@ -91,7 +95,7 @@ ________________________________________Common Base (Do Not Use): &common-colors
   subtitle-font-weight: 600
   subtitle-line-height: normal
   small-font-size: 0.9rem
-  
+
   h1-font-size: 2.85rem
   h2-font-size: 2.25rem
   h3-font-size: 2rem
@@ -116,15 +120,7 @@ ________________________________________Common Base (Do Not Use): &common-colors
   h6-font: "var(--h6-font-weight) var(--h6-font-size) var(--font-stack)"
 
   ha-card-header-font-size: var(--card-title-font-size)
-
-  paper-font-headline_-_font-size: 3.5rem
-  paper-font-headline_-_font-weight: 600
-  paper-font-headline_-_letter-spacing: 0
-  paper-font-headline_-_line-height: 1.4
-
-  paper-font-title_-_font-size: var(--card-title-font-size)
-  paper-font-title_-_font-weight: var(--card-title-font-weight)
-  paper-font-title_-_line-height: var(--card-title-line-height)
+  ha-card-header-font-weight: var(--card-title-font-weight)
 
   material-small-font-size: 0.875rem
   material-caption-font-size: 0.7rem
@@ -172,7 +168,6 @@ ________________________________________Common Base (Do Not Use): &common-colors
   mush-shape-size: 48px
   mush-shape-avatar-size: 48px
   mush-shape-icon-size: 20px
-  #mush-shape-animation:
   mush-slider-height: 16px
 
 
@@ -188,14 +183,11 @@ ________________________________________Common Base (Do Not Use): &common-colors
   sidebar-text-color: var(--primary-text-color)
   sidebar-selected-background-color: var(--primary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
-  sidebar-selected-text-color: var(--sidebar-selected-icon-color))
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
 
-  # Sliders
-  paper-slider-knob-color: var(--accent-color)
-  paper-slider-knob-start-color: var(--paper-slider-knob-color)
-  paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: var(--paper-slider-knob-color)
-  paper-slider-secondary-color: rgb(var(--rgb-primary-color-darker))
+  # Sliders (legacy slider support)
+  slider-color: var(--accent-color)
+  slider-secondary-color: rgb(var(--rgb-primary-color-darker))
 
   # Labels
   label-badge-background-color: var(--primary-background-color)
@@ -206,10 +198,9 @@ ________________________________________Common Base (Do Not Use): &common-colors
   label-badge-yellow: "#D5AE43"
   label-badge-gray: "#5F6267"
 
-  # Cards
-  paper-dialog-background-color: var(--card-background-color)
-  paper-listbox-background-color: var(--secondary-background-color)
-  paper-card-background-color: var(--card-background-color)
+  # Cards (modern)
+  dialog-background-color: var(--card-background-color)
+  sidebar-card-background-color: var(--secondary-background-color)
 
   # Switches
   switch-checked-button-color: var(--primary-color)
@@ -224,12 +215,6 @@ ________________________________________Common Base (Do Not Use): &common-colors
   ha-color-picker-wheel-shadow: none
   ha-color-picker-marker-borderwidth: 4
   ha-color-picker-marker-bordercolor: var(--accent-text-color)
-
-  # Toggles
-  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
-  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
-  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
-  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
 
   # Table
   table-row-background-color: var(--primary-background-color)
@@ -279,7 +264,6 @@ ________________________________________Common Base (Do Not Use): &common-colors
   btn-bg-color-off: var(--primary-background-color)
   mdc-button-disabled-fill-color: var(--disabled-color)
   mdc-button-disabled-ink-color: var(--disabled-text-color)
-  # mdc-button-raised-box-shadow: 
 
   # Home Assistant override
   ha-card-box-shadow: "none"
@@ -344,62 +328,32 @@ ________________________________________Common Base (Do Not Use): &common-colors
   rgb-state-update-installing-color: var(--rgb-warning-color)
   rgb-state-vacuum-color: var(--rgb-primary-color)
 
-________________________________________Common Base 2 (Do Not Use):
+________________________________________Common Light Mode (Do Not Use): &common-light
+  <<: *common-colors
 
-  modes:
-    dark: &common-dark
-      <<: *common-colors
+  # Background Colors
+  mdc-ripple-color: "#222222"
+  rgb-mdc-ripple-color: "32,32,32"
 
-      # Background Colors
-      mdc-ripple-color: "#AAAAAA"
-      rgb-mdc-ripple-color: "170,170,170"
+  # Text Colors
+  primary-text-color: "rgba(0,0,0,.95)"
+  rgb-primary-text-color: "0,0,0"
+  secondary-text-color: "rgba(0,0,0,.66)"
+  rgb-secondary-text-color: "84,84,84"
+  disabled-text-color: "rgba(0,0,0,.6)"
+  rgb-disabled-text-color: "152,152,152"
 
-      # Text Colors
-      primary-text-color: "rgb(255,255,255)"
-      rgb-primary-text-color: "255,255,255"
-      secondary-text-color: "rgba(255,255,255,.75)"
-      rgb-secondary-text-color: "192,192,192"
-      disabled-text-color: "rgba(255,255,255,.55)"
-      rgb-disabled-text-color: "140,140,140"
+  # Other Mode Specific Variables
+  mdc-dialog-scrim-color: rgba(var(--rgb-primary-background-color),.667)
+  dialog-backdrop-filter: none
+  dialog-box-shadow: var(--rgb-primary-text-color)
+  slider-thumb-color: "#E8E8E8"
 
-      # Other Mode Specific Variables
-      mdc-dialog-scrim-color: "rgba(0, 0, 0, 0.5)"
-      dialog-backdrop-filter: none
-      dialog-box-shadow: var(--rgb-accent-color)
-      slider-thumb-color: "#121212"
+  sidebar-icon-color: rgba(0,0,0,.5)
+  sidebar-background-color: var(--primary-background-color)
 
-      sidebar-icon-color: var(--secondary-text-color)
-      sidebar-background-color: var(--secondary-background-color)
-
-      # Custom
-      dark-mode-filter: "invert(1) hue-rotate(.5turn)"
-
-    light: &common-light
-      <<: *common-colors
-
-      # Background Colors
-      mdc-ripple-color: "#222222"
-      rgb-mdc-ripple-color: "32,32,32"
-
-      # Text Colors
-      primary-text-color: "rgba(0,0,0,.95)"
-      rgb-primary-text-color: "0,0,0"
-      secondary-text-color: "rgba(0,0,0,.66)"
-      rgb-secondary-text-color: "84,84,84"
-      disabled-text-color: "rgba(0,0,0,.6)"
-      rgb-disabled-text-color: "152,152,152"
-
-      # Other Mode Specific Variables
-      mdc-dialog-scrim-color: rgba(var(--rgb-primary-background-color),.667)
-      dialog-backdrop-filter: none
-      dialog-box-shadow: var(--rgb-primary-text-color)
-      slider-thumb-color: "#E8E8E8"
-
-      sidebar-icon-color: rgba(0,0,0,.5)
-      sidebar-background-color: var(--primary-background-color)
-
-      # Custom
-      dark-mode-filter: "invert(0)"
+  # Custom
+  dark-mode-filter: "invert(0)"
 
 
 ############################################
@@ -407,7 +361,7 @@ ________________________________________Common Base 2 (Do Not Use):
 ############################################
 
 
-________________________________________Common Base 3 (Do Not Use): &common-card-mods
+________________________________________Common Base Card Mods (Do Not Use): &common-card-mods
 
   # Card Mod
   card-mod-row-yaml: &card-mod-row |
@@ -434,12 +388,12 @@ ________________________________________Common Base 3 (Do Not Use): &common-card
       .secondary {
         font-size: var(--small-font-size);
         line-height: 1.4;
-      }                  
+      }
       .state, .entity div {
         font-size: var(--h5-font-size);
         font-weight: 400;
       }
-      
+
   card-mod-card-yaml: &card-mod-card |
     .: |
       ha-card {
@@ -569,7 +523,7 @@ ________________________________________Common Base 3 (Do Not Use): &common-card
       state-info { margin-left: -8px; margin-top: -42px; }
     ha-more-info-info$state-card-display$state-info$: |
       .name { display: none; }
-      .time-ago { margin-top: 42px; 
+      .time-ago { margin-top: 42px;
         font-size: var(--h6-font-size);
         text-transform: uppercase;}
       state-badge {
@@ -598,7 +552,7 @@ ________________________________________Common Base 3 (Do Not Use): &common-card
       }
       .data-entry:last-child .value {
         margin-bottom: 0;
-      }      
+      }
     ha-more-info-history$state-history-charts:
       $:
         state-history-chart-timeline$: |
@@ -635,7 +589,7 @@ ________________________________________Common Base 3 (Do Not Use): &common-card
       }
     ha-app-layout$app-header$app-toolbar$ha-tabs$: |
       .iron-selected paper-tab {
-      
+
       }
 
   card-mod-sidebar: &card-mod-sidebar |
@@ -675,86 +629,27 @@ ________________________________________Common Base 3 (Do Not Use): &common-card
 
 # Base Metro Theme
 
-________________________________________Common Base 4 (Do Not Use):
+________________________________________Metro Light Mode (Do Not Use): &metro-common-light
+  <<: *common-light
+  primary-background-color: "rgb(255,255,255)"
+  rgb-primary-background-color: "255,255,255"
+  secondary-background-color: "rgb(232,232,232)"
+  rgb-secondary-background-color: "232,232,232"
+  card-background-color: "rgba(247,247,247)"
+  rgb-card-background-color: "247,247,247"
 
-  modes:
-    dark: &metro-common-dark
-      <<: *common-dark
-      primary-background-color: "rgb(0,0,0)"
-      rgb-primary-background-color: "0,0,0"
-      secondary-background-color: "rgb(24,24,24)"
-      rgb-secondary-background-color: "24,24,24"
-      card-background-color: "rgb(19,19,19)"
-      rgb-card-background-color: "19,19,19"
+  ha-card-border-radius: 0
+  ha-config-card-border-radius: 0
+  ha-dialog-border-radius: 0
+  vertical-stack-card-margin: "1px 0px 1px 0px"
+  mush-control-border-radius: 0px
+  mdc-shape-small: 0
 
-      ha-card-border-radius: 0
-      ha-config-card-border-radius: 0
-      ha-dialog-border-radius: 0
-      vertical-stack-card-margin: "1px 0px 1px 0px"
-      mush-control-border-radius: 0px
-      mdc-shape-small: 0
+  mdc-button-raised-box-shadow: none
+  mdc-button-raised-box-shadow-hover: none
 
-      mdc-button-raised-box-shadow: none
-      mdc-button-raised-box-shadow-hover: none
-
-      mdc-theme-surface: "rgb(24,24,24)"
-      rgb-mdc-theme-surface: "24,24,24"
-
-    light: &metro-common-light
-      <<: *common-light
-      primary-background-color: "rgb(255,255,255)"
-      rgb-primary-background-color: "255,255,255"
-      secondary-background-color: "rgb(232,232,232)"
-      rgb-secondary-background-color: "232,232,232"
-      card-background-color: "rgba(247,247,247)"
-      rgb-card-background-color: "247,247,247"
-
-      ha-card-border-radius: 0
-      ha-config-card-border-radius: 0
-      ha-dialog-border-radius: 0
-      vertical-stack-card-margin: "1px 0px 1px 0px"
-      mush-control-border-radius: 0px
-      mdc-shape-small: 0
-
-      mdc-button-raised-box-shadow: none
-      mdc-button-raised-box-shadow-hover: none
-
-      mdc-theme-surface: var(--primary-background-color)
-      rgb-mdc-theme-surface: var(--rgb-primary-background-color)
-
-
-
-# Base Fluent Theme
-
-________________________________________Common Base 5 (Do Not Use):
-
-  modes:
-    dark: &fluent-common-dark
-      <<: *common-dark
-      ha-card-border-radius: "4px"
-      ha-config-card-border-radius: "4px"
-      ha-dialog-border-radius: "8px"
-      vertical-stack-card-margin: "1px 0px 1px 0px"
-      mush-control-border-radius: 4px      
-      mdc-shape-small: 4px
-
-      mdc-theme-surface: var(--primary-background-color)
-      rgb-mdc-theme-surface: var(--rgb-primary-background-color)
-
-    light: &fluent-common-light
-      <<: *common-light
-      primary-background-color: "rgb(255,255,255)"
-      rgb-primary-background-color: "255,255,255"
-
-      ha-card-border-radius: "4px"
-      ha-config-card-border-radius: "4px"
-      ha-dialog-border-radius: "8px"
-      vertical-stack-card-margin: "1px 0px 1px 0px"
-      mush-control-border-radius: 4px
-      mdc-shape-small: 4px
-
-      mdc-theme-surface: var(--card-background-color)
-      rgb-mdc-theme-surface: var(--rgb-card-background-color)
+  mdc-theme-surface: var(--primary-background-color)
+  rgb-mdc-theme-surface: var(--rgb-primary-background-color)
 
 
 
@@ -762,268 +657,7 @@ ________________________________________Common Base 5 (Do Not Use):
 ############################################
 ############################################
 
-# Color Variations
-
-# So happy that YAML Anchors work so I don't need to duplicate code a billion times.
-# It's relatively easy to create your own theme. You just need to provide the colors.
-
-
-Metro Red:
-  <<: *common-card-mods
-  card-mod-theme: "Metro Red"
-
-  primary-color: "#C30052"
-  rgb-primary-color: "195,0,82"
-  rgb-primary-color-darker: "144, 0, 60"
-  rgb-primary-color-lighter: "233, 0, 98"
-  hue-primary-color: "335deg"
-
-  accent-color: "#e90062"
-  rgb-accent-color: "233, 0, 98"
-
-  modes:
-    dark:
-      <<: *metro-common-dark
-    light:
-      <<: *metro-common-light
-
-Fluent Red:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Red"
-
-  primary-color: "#C30052"
-  rgb-primary-color: "195,0,82"
-  rgb-primary-color-darker: "144, 0, 60"
-  rgb-primary-color-lighter: "233, 0, 98"
-  hue-primary-color: "335deg"
-
-  accent-color: "#e90062"
-  rgb-accent-color: "233, 0, 98"
-
-  modes:
-    dark:
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(27,24,25)"
-      rgb-primary-background-color: "27,24,25"
-      secondary-background-color: "rgb(67,61,63)"
-      rgb-secondary-background-color: "67,61,63"
-      card-background-color: "rgb(40,36,38)"
-      rgb-card-background-color: "40,36,38"
-
-    light:
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(249,210,226)"
-      rgb-secondary-background-color: "249,210,226"
-      card-background-color: "rgb(245,239,242)"
-      rgb-card-background-color: "245,239,242"
-
-
-
-Metro Blue:
-  <<: *common-card-mods
-  card-mod-theme: "Metro Blue"
-
-  primary-color: "#0078d7"
-  rgb-primary-color: "0,120,215"
-  rgb-primary-color-darker: "0,91,163"
-  rgb-primary-color-lighter: "0,141,253"
-  hue-primary-color: "207deg"
-
-  accent-color: "#008dfd"
-  rgb-accent-color: "0,141,253"
-
-  modes:
-    dark:
-      <<: *metro-common-dark
-    light:
-      <<: *metro-common-light
-
-Fluent Blue:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Blue"
-
-  primary-color: "#0078d7"
-  rgb-primary-color: "0,120,215"
-  rgb-primary-color-darker: "0,91,163"
-  rgb-primary-color-lighter: "0,141,253"
-  hue-primary-color: "207deg"
-
-  accent-color: "#008dfd"
-  rgb-accent-color: "0,141,253"
-
-  modes:
-    dark: 
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(24,26,27)"
-      rgb-primary-background-color: "24,26,27"
-      secondary-background-color: "rgb(57,64,70)"
-      rgb-secondary-background-color: "57,64,70"
-      card-background-color: "rgb(36,38,40)"
-      rgb-card-background-color: "36,38,40"
-
-    light: 
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(210,231,249)"
-      rgb-secondary-background-color: "210,231,249"
-      card-background-color: "rgb(239,243,245)"
-      rgb-card-background-color: "239,243,245"
-
-
-
-Metro Green:
-  <<: *common-card-mods
-  card-mod-theme: "Metro Green"
-
-  primary-color: "#00cb6a"
-  rgb-primary-color: "0, 203, 106"
-  rgb-primary-color-darker: "0, 151, 79"
-  rgb-primary-color-lighter: "0, 241, 125"
-  hue-primary-color: "151deg"
-
-  accent-color: "#00f17d"
-  rgb-accent-color: "0, 241, 125"
-
-  modes:
-    dark:
-      <<: *metro-common-dark
-    light:
-      <<: *metro-common-light
-
-Fluent Green:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Green"
-
-  primary-color: "#00cb6a"
-  rgb-primary-color: "0, 203, 106"
-  rgb-primary-color-darker: "0, 151, 79"
-  rgb-primary-color-lighter: "0, 241, 125"
-  hue-primary-color: "151deg"
-
-  accent-color: "#00f17d"
-  rgb-accent-color: "0, 241, 125"
-
-  modes:
-    dark: 
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(24,27,26)"
-      rgb-primary-background-color: "24,27,26"
-      secondary-background-color: "rgb(57,70,64)"
-      rgb-secondary-background-color: "57,70,64"
-      card-background-color: "rgb(36,40,38)"
-      rgb-card-background-color: "36,40,38"
-
-    light: 
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(210,249,231)"
-      rgb-secondary-background-color: "210,249,231"
-      card-background-color: "rgb(239,245,243)"
-      rgb-card-background-color: "239,245,243"
-
-
-
-Metro Orange:
-  <<: *common-card-mods
-  card-mod-theme: "Metro Orange"
-
-  primary-color: "#ff8c00"
-  rgb-primary-color: "255, 140, 0"
-  rgb-primary-color-darker: "204, 112, 0"
-  rgb-primary-color-lighter: "255, 157, 0"
-  hue-primary-color: "33deg"
-
-  accent-color: "#ff9d00"
-  rgb-accent-color: "255, 157, 0"
-
-  modes:
-    dark:
-      <<: *metro-common-dark
-    light:
-      <<: *metro-common-light
-
-Fluent Orange:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Orange"
-
-  primary-color: "#ff8c00"
-  rgb-primary-color: "255, 140, 0"
-  rgb-primary-color-darker: "204, 112, 0"
-  rgb-primary-color-lighter: "255, 157, 0"
-  hue-primary-color: "33deg"
-
-  accent-color: "#ff9d00"
-  rgb-accent-color: "255, 157, 0"
-
-  modes:
-    dark: 
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(27,26,24)"
-      rgb-primary-background-color: "27,26,24"
-      secondary-background-color: "rgb(70,64,57)"
-      rgb-secondary-background-color: "70,64,57"
-      card-background-color: "rgb(40,38,36)"
-      rgb-card-background-color: "40,38,36"
-
-    light: 
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(249,231,210)"
-      rgb-secondary-background-color: "249,231,210"
-      card-background-color: "rgb(245,243,239)"
-      rgb-card-background-color: "245,243,239"
-
-
-
-Metro Purple:
-  <<: *common-card-mods
-  card-mod-theme: "Metro Purple"
-
-  primary-color: "#6a00cb"
-  rgb-primary-color: "106, 0, 203" # hsl(hue,100,42)
-  rgb-primary-color-darker: "105, 0, 204" # hsl(hue,100,32)
-  rgb-primary-color-lighter: "169, 77, 255" # hsl(hue,100,50)
-  hue-primary-color: "271deg"
-
-  accent-color: "#A94DFF"
-  rgb-accent-color: "169, 77, 255"
-
-  modes:
-    dark:
-      <<: *metro-common-dark
-    light:
-      <<: *metro-common-light
-
-Fluent Purple:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Purple"
-
-  primary-color: "#6a00cb"
-  rgb-primary-color: "106, 0, 203" # hsl(hue,100,42)
-  rgb-primary-color-darker: "105, 0, 204" # hsl(hue,100,32)
-  rgb-primary-color-lighter: "169, 77, 255" # hsl(hue,100,50)
-  hue-primary-color: "271deg"
-
-  accent-color: "#A94DFF"
-  rgb-accent-color: "169, 77, 255"
-
-  modes:
-    dark: 
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(26,24,27)" # hsl(hue,5,10)
-      rgb-primary-background-color: "26,24,27"
-      secondary-background-color: "rgb(64,57,70)" # hsl(hue,10,25)
-      rgb-secondary-background-color: "64,57,70"
-      card-background-color: "rgb(38,36,40)" # hsl(hue,5,15)
-      rgb-card-background-color: "38,36,40"
-
-    light: 
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(230,210,249)" # hsl(hue,75,90)
-      rgb-secondary-background-color: "230,210,249"
-      card-background-color: "rgb(242,239,245)" # hsl(hue,25,95)
-      rgb-card-background-color: "242,239,245"
-
-
-
-# Use the following as the template for your custom color theme.
+# METRO SLATE LIGHT THEME
 
 Metro Slate:
   <<: *common-card-mods
@@ -1039,42 +673,5 @@ Metro Slate:
   rgb-accent-color: "101,115,134"
 
   modes:
-    dark:
-      <<: *metro-common-dark
     light:
       <<: *metro-common-light
-
-
-Fluent Slate:
-  <<: *common-card-mods
-  card-mod-theme: "Fluent Slate"
-
-  primary-color: "#4f5a68"
-  rgb-primary-color: "79,90,104"
-  rgb-primary-color-darker: "57,65,76"
-  rgb-primary-color-lighter: "101,115,134"
-  hue-primary-color: "214deg"
-
-  accent-color: "#677385"
-  rgb-accent-color: "101,115,134"
-
-  modes:
-    dark:
-      <<: *fluent-common-dark
-      primary-background-color: "rgb(24,25,27)"
-      rgb-primary-background-color: "24,25,27"
-      secondary-background-color: "rgb(57,63,70)"
-      rgb-secondary-background-color: "57,63,70"
-      card-background-color: "rgb(36,38,40)"
-      rgb-card-background-color: "36,38,40"
-
-    light:
-      <<: *fluent-common-light
-      secondary-background-color: "rgb(223,229,236)"
-      rgb-secondary-background-color: "223,229,236"
-      card-background-color: "rgb(240,242,244)"
-      rgb-card-background-color: "240,242,244"
-
-  
-
-# Paste your custom color themes here.
