@@ -121,6 +121,12 @@ Metro Slate:
       .mdc-dialog__surface {
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
       }
+      .mdc-dialog__actions {
+        background-color: var(--card-background-color) !important;
+      }
+      .mdc-dialog .mdc-button {
+        --mdc-theme-primary: var(--primary-color) !important;
+      }
     ha-dialog$: |
       .mdc-dialog__surface {
         background-color: var(--card-background-color) !important;
@@ -128,6 +134,12 @@ Metro Slate:
       }
       .mdc-dialog__surface {
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
+      }
+      .mdc-dialog__actions {
+        background-color: var(--card-background-color) !important;
+      }
+      .mdc-dialog .mdc-button {
+        --mdc-theme-primary: var(--primary-color) !important;
       }
     ha-header-bar$: |
       .mdc-top-app-bar {
