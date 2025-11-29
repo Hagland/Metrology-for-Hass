@@ -110,6 +110,7 @@ Metro Slate:
     $: |
       .mdc-dialog__surface {
         background-color: var(--card-background-color) !important;
+        border-radius: var(--ha-dialog-border-radius) !important;
       }
       .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
         overflow: visible;
@@ -123,6 +124,7 @@ Metro Slate:
     ha-dialog$: |
       .mdc-dialog__surface {
         background-color: var(--card-background-color) !important;
+        border-radius: var(--ha-dialog-border-radius) !important;
       }
       .mdc-dialog__surface {
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
@@ -304,7 +306,7 @@ Metro Slate:
   dark-primary-color: var(--primary-color)
   light-primary-color: var(--primary-color)
 
-  mdc-theme-primary: var(--accent-color)
+  mdc-theme-primary: var(--primary-color)
   mdc-theme-on-primary: var(--accent-text-color)
 
   # Borders
@@ -598,7 +600,7 @@ Metro Slate:
   rgb-primary-background-color: "255,255,255"
   secondary-background-color: "rgb(232,232,232)"
   rgb-secondary-background-color: "232,232,232"
-  card-background-color: "rgba(247,247,247)"
+  card-background-color: "rgb(247,247,247)"
   rgb-card-background-color: "247,247,247"
 
   # Border Radius Settings
@@ -628,3 +630,9 @@ Metro Slate:
 
   accent-color: "#677385"
   rgb-accent-color: "101,115,134"
+
+  # Additional Color Palette Variables
+  rgb-blue-color: "33,150,243"
+  rgb-cyan-color: "0,188,212"
+  rgb-purple-color: "156,39,176"
+  rgb-deep-orange-color: "255,87,34"
