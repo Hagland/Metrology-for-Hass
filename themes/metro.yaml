@@ -40,7 +40,8 @@ Metro Slate Test:
   card-mod-card-yaml: |
     .: |
       ha-card {
-        --mdc-icon-size: 20px
+        --mdc-icon-size: 20px;
+        border-radius: var(--ha-card-border-radius) !important;
       }
       ha-card .value {
         font-size: var(--h1-font-size);
@@ -212,6 +213,10 @@ Metro Slate Test:
 
   card-mod-root-yaml: |
     .: |
+      ha-card {
+        border-radius: var(--ha-card-border-radius) !important;
+        overflow: hidden;
+      }
       @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
         app-header, app-toolbar {
           background-color: "rgba(var(--rgb-primary-background-color),.33)"
@@ -602,12 +607,17 @@ Metro Slate Test:
   card-background-color: "rgba(247,247,247)"
   rgb-card-background-color: "247,247,247"
 
+  # Border Radius Settings
+  border-radius: 12px
   ha-card-border-radius: 12px
   ha-config-card-border-radius: 12px
   ha-dialog-border-radius: 16px
+  state-icon-border-radius: 50%
   vertical-stack-card-margin: "1px 0px 1px 0px"
   mush-control-border-radius: 8px
   mdc-shape-small: 8px
+  mdc-shape-medium: 12px
+  mdc-shape-large: 16px
 
   mdc-button-raised-box-shadow: none
   mdc-button-raised-box-shadow-hover: none
