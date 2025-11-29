@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:community.home-assistant.io)"
+      "WebFetch(domain:community.home-assistant.io)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
