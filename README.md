@@ -2,7 +2,7 @@
 
 A modernized Home Assistant theme based on the Metro design language, featuring a slate blue-gray color scheme with crisp typography and clean aesthetics.
 
-This is a modernized, single-theme version extracted from the [Metrology for Home Assistant](https://github.com/Madelena/Metrology-for-Hass) theme collection by Madelena Mak. Updated to Home Assistant 2025.5+ standards with deprecated variables removed and new typography system variables added.
+This is a modernized, single-theme version extracted from the [Metrology for Home Assistant](https://github.com/Madelena/Metrology-for-Hass) theme collection by Madelena Mak. Updated to Home Assistant 2025.5+ standards with deprecated variables removed, new typography system variables added, and some personal preferences added.
 
 ## About This Theme
 
