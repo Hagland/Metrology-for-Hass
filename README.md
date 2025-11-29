@@ -36,6 +36,7 @@ This is a modernized, single-theme version extracted from the [Metrology for Hom
 ### Installation
 
 1. If you are new to Home Assistant themes, first add this to your `configuration.yaml` file:
+
    ```yaml
    frontend:
      themes: !include_dir_merge_named themes
