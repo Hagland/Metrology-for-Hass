@@ -172,7 +172,7 @@ Metro Slate Test:
       state-badge {
         width: 32px !important;
         height: 32px !important;
-        border-radius: 0 !important;
+        border-radius: 50% !important;
         margin: 4px 8px 8px 8px;
       }
       state-badge[icon] {
@@ -602,12 +602,12 @@ Metro Slate Test:
   card-background-color: "rgba(247,247,247)"
   rgb-card-background-color: "247,247,247"
 
-  ha-card-border-radius: 0
-  ha-config-card-border-radius: 0
-  ha-dialog-border-radius: 0
+  ha-card-border-radius: 12px
+  ha-config-card-border-radius: 12px
+  ha-dialog-border-radius: 16px
   vertical-stack-card-margin: "1px 0px 1px 0px"
-  mush-control-border-radius: 0px
-  mdc-shape-small: 0
+  mush-control-border-radius: 8px
+  mdc-shape-small: 8px
 
   mdc-button-raised-box-shadow: none
   mdc-button-raised-box-shadow-hover: none
