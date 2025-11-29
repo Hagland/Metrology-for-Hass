@@ -111,9 +111,11 @@ Metro Slate:
       .mdc-dialog__surface {
         background-color: var(--card-background-color) !important;
       }
-      .mdc-dialog .mdc-dialog__container .mdc-dialog__surface,
-      .mdc-dialog .mdc-dialog__content {
+      .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
         overflow: visible;
+      }
+      .mdc-dialog .mdc-dialog__content {
+        overflow: auto;
       }
       .mdc-dialog__surface {
         box-shadow: 0 0px 16px 4px rgba(var(--dialog-box-shadow), .15), 0 16px 64px 32px rgba(var(--dialog-box-shadow), .5) !important;
