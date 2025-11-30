@@ -154,6 +154,7 @@ Metro Slate:
         overflow: inherit;
         white-space: normal;
         margin-left: -6px;
+        color: var(--primary-text-color);
       }
       .content {
         xmargin-top: -8px;
